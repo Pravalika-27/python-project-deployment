@@ -1,7 +1,7 @@
 resource "aws_instance" "public_subnet-1" {
 ami="ami-0ca9fb66e076a6e32"
 instance_type="t2.micro"
-count=1
+count=2
 key_name="pinku"
 vpc_security_group_ids=["${aws_security_group.demosg.id}"]
 subnet_id="${aws_subnet.public_subnet-1.id}"
